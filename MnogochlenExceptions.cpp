@@ -1,7 +1,7 @@
 #include "MnogochlenExceptions.hpp"
 #include <cstring>
 
-MnogochlenExceptions::MnogochlenExceptions() { cout << "Error exception! " << endl; }
+MnogochlenExceptions::MnogochlenExceptions() { cout << "An exception occured! " << endl; }
 void MnogochlenExceptions::SetMessage(const char *Message)
 {
     if (Message != nullptr && strcmp(Message, "") != 0)

@@ -13,12 +13,10 @@ struct Node
 {
     long long MyOrder;
     T Value;
-    Node *Next;
-    Node(long long MyOrder = 0, T Value = 0, Node *Next = nullptr)
+    Node(long long MyOrder = 0, T Value = 0)
     {
         this->MyOrder = MyOrder;
         this->Value = Value;
-        this->Next = Next;
     }
 };
 
@@ -57,37 +55,7 @@ public:
 
     ~Mnogochlen() = default;
 
-    void Set(long long Order, T Coef)
-    {
-        if (Coef == T(0))
-        {
-            if (Data.empty())
-            {
-                OrderOfMnogochlen -= 1;
-            }
-            return;
-        }
-
-        for (auto elem : Data)
-        {
-            if (elem.MyOrder == Order)
-            {
-                elem.Value = Coef;
-                return;
-            }
-        }
-
-        for (auto elem = Data.begin(); elem!= Data.end(); elem++)
-        {
-            if ((*elem).MyOrder < Order)
-            {
-                Data.insert(elem, Node<T>(Order, Coef));
-                return;
-            }
-        }
-
-        Data.push_back(Node<T>(Order, Coef));
-    }
+    void Set(long long Order, T Coef);
 
     T operator[](long long Order) const;
 
@@ -125,12 +93,6 @@ public:
             os << " + ";
         }
         os << '0';
-        /*for (auto it = Obj.cbegin(); it != Obj.cend(); it++)
-        {
-            os << (*it).Value << "*x^" << (*it).MyOrder;
-            if ((it++)!= Obj.cend())
-                os << " + ";
-        }*/
         return os;
     }
 };

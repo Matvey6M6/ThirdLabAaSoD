@@ -45,7 +45,13 @@ Mnogochlen<T> *MenuInput()
         cout << "Coef by " << i << ":\n";
         T Coefficient;
         check<T>(Coefficient);
-        Newbie->Set(i, Coefficient);
+        try {
+            Newbie->Set(i, Coefficient);
+        }
+        catch (RangeError e)
+        {
+            printf("Operation will not be saved.");
+        }
         cout << endl;
     }
 
@@ -90,14 +96,10 @@ void GiveAnX(const Mnogochlen<T> *Object)
     T X = InputValue<T>();
 
     for (auto node_el : Object->GetData())
+    for (auto node_el : Object->GetData())
     {
         Y += node_el.Value * T(pow(X, node_el.MyOrder));
     }
-
-    /*for (auto it = Object->crbegin(); it != Object->crend(); it++)
-    {
-        Y += (*Object)[i] * T(pow(X, i));
-    }*/
 
     cout << "Value for polynom (x = " << X << "): " << Y << endl;
 }
@@ -180,15 +182,45 @@ void ChangeCoefByIndex(Mnogochlen<T> *Object)
 
     cout << "Change coefficient by index menu\n"
          << endl;
-    cout << (*Object) << endl;
+
+    cout << (*Object)<< '\n' << endl;
+
+    cout << "Size of your mnogochlen: " << Object->GetOrderOfMnogochlen() << '\n' << endl;
+
     cout << "Input index: ";
     int Index;
     check<int>(Index);
     cout << "Input new value: ";
     T value;
     check<T>(value);
-    (*Object).Set(Index, value);
+    try {
+        (*Object).Set(Index, value);
+    }
+    catch (RangeError e)
+    {
+        printf("Operation will not be saved.");
+        return;
+    }
     cout << "Value: " << (*Object)[Index] << endl;
+}
+
+template <typename T>
+void ReadByIndex(const Mnogochlen<T>* Object)
+{
+    system("cls");
+
+    cout << "Read by index menu\n"
+        << endl;
+
+    cout << "Mnogochlen : " << (*Object) << endl;;
+
+    cout << "\nGive an index: ";
+
+    int Index;
+    check<int>(Index);
+
+    cout << "Value by index " << Index << " : " << (*Object)[Index] << endl;
+
 }
 
 template <typename T>
@@ -268,12 +300,13 @@ int MenuChoice()
     cout << "\n\t[5] - Change coefficinent by index" << endl;
     cout << "\n\t[6] - Get roots (3rd order)" << endl;
     cout << "\n\t[7] - Compare two polynoms" << endl;
+    cout << "\n\t[8] - Read by index" << endl;
     cout << "\n\t[BACKSPACE] - Set new polynoms" << endl;
     cout << "\n\n\tEsc - Exit" << endl;
     while (true)
     {
         int key = _getch();
-        if ((key == 49) || (key == 50) || (key == 51) || (key == 52) || (key == 53) || (key == 54) || (key == 55) || (key == 127) || (key == 27))
+        if ((key == 49) || (key == 50) || (key == 51) || (key == 52) || (key == 53) || (key == 54) || (key == 55) || (key == 56) || (key == 127) || (key == 27))
         {
             return key;
         }
@@ -323,6 +356,9 @@ int Menu1()
                 break;
             case 55: // Compare two polynoms
                 CompareTwoPolynoms<T>(Object);
+                break;
+            case 56: // Compare two polynoms
+                ReadByIndex<T>(Object);
                 break;
             case 127: // Set new polynoms
                 delete Object;

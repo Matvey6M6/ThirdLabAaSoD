@@ -96,65 +96,54 @@ Mnogochlen<T>::~Mnogochlen()
     }
 }*/
 
-/*template <typename T>
+template <typename T>
 void Mnogochlen<T>::Set(long long Order, T Coef)
 {
+    if (Order > OrderOfMnogochlen || Order < 0)
+    {
+        throw RangeError("Out of mnogochlen's size.");
+    }
+       
     if (Coef == T(0))
     {
-        if (Order == GetOrderOfMnogochlen())
+        if (Data.empty())
         {
             OrderOfMnogochlen -= 1;
-            cout << "Order -= 1" << endl;
+        }
+        else
+        {
+            for (auto elem = Data.begin(); elem != Data.end(); elem++)
+            {
+                if (elem->MyOrder == Order)
+                {
+                    Data.erase(elem);
+                    return;
+                }
+            }
         }
         return;
     }
-    if (Order < 0 || Order > GetOrderOfMnogochlen())
-    {
-        throw RangeError("Incorrect \"Order\", value can't be initialized\n");
-    }
-    if (Head == nullptr)
-    {
-        Node<T> *newbie = new Node<T>;
-        newbie->MyOrder = Order;
-        newbie->Value = Coef;
-        newbie->Next = nullptr;
-        Head = newbie;
-        return;
-    }
 
-    Node<T> *PointerA = GetHead();
-    Node<T> *PointerB = PointerA;
-    for (long long i = 0; i < GetOrderOfMnogochlen() + 1 && PointerA; i++)
+    for (auto elem = Data.begin(); elem != Data.end(); elem++)
     {
-        if (PointerA->Next == nullptr && Order < PointerA->MyOrder) // последний эдемент
+        if (elem->MyOrder == Order)
         {
-            Node<T> *newbie = new Node<T>;
-            newbie->MyOrder = Order;
-            newbie->Value = Coef;
-            newbie->Next = nullptr;
-
-            PointerA->Next = newbie;
+            elem->Value = Coef;
             return;
         }
-        else if (PointerA->MyOrder == Order) // просто изменить значение
-        {
-            PointerA->Value = Coef;
-            return;
-        }
-        else if (PointerA->MyOrder < Order) // добавить между
-        {
-            Node<T> *newbie = new Node<T>;
-            newbie->MyOrder = Order;
-            newbie->Value = Coef;
-
-            newbie->Next = PointerA;
-            PointerB->Next = newbie;
-            return;
-        }
-        PointerB = PointerA;
-        PointerA = PointerA->Next;
     }
-}*/
+
+    for (auto elem = Data.begin(); elem!= Data.end(); elem++)
+    {
+        if ((*elem).MyOrder < Order)
+        {
+            Data.insert(elem, Node<T>(Order, Coef));
+            return;
+        }
+    }
+
+    Data.push_back(Node<T>(Order, Coef));
+}
 
 template <typename T>
 T Mnogochlen<T>::operator[](long long Order) const
