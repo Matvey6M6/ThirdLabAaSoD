@@ -1,0 +1,32 @@
+﻿  main.cpp
+  Mnogochlen.cpp
+C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(417,31): warning C4244: +=: преобразование "double" в "T", возможна потеря данных
+          with
+          [
+              T=int
+          ]
+C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(412,1): message : во время компиляции функции-члена класс шаблон "T Mnogochlen<T>::CountValue(T) const"
+          with
+          [
+              T=int
+          ]
+C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(291,31): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "Mnogochlen<int>"
+C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(376,1): warning C4305: аргумент: усечение из "double" в "const std::complex<float>::_Ty"
+C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(350,1): message : во время компиляции функции-члена класс шаблон "void Mnogochlen<std::complex<float>>::GetRoots(void) const"
+C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(432,42): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "Mnogochlen<std::complex<float>>"
+C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(377,1): warning C4305: аргумент: усечение из "double" в "const std::complex<float>::_Ty"
+C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(417,49): warning C4244: аргумент: преобразование "const __int64" в "const std::complex<float>::_Ty", возможна потеря данных
+C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(412,1): message : во время компиляции функции-члена класс шаблон "T Mnogochlen<T>::CountValue(T) const"
+          with
+          [
+              T=std::complex<float>
+          ]
+C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(417,49): warning C4244: аргумент: преобразование "const __int64" в "const std::complex<double>::_Ty", возможна потеря данных
+C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(412,1): message : во время компиляции функции-члена класс шаблон "T Mnogochlen<T>::CountValue(T) const"
+          with
+          [
+              T=std::complex<double>
+          ]
+C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(433,43): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "Mnogochlen<std::complex<double>>"
+  Создание кода...
+  ThirdLabAaSoD.vcxproj -> C:\Users\RELOAD\Documents\ThirdLabAaSoD\x64\Debug\ThirdLabAaSoD.exe
