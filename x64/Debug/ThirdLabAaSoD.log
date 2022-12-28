@@ -1,2 +1,12 @@
-﻿  main.cpp
-  ThirdLabAaSoD.vcxproj -> C:\Users\RELOAD\Documents\ThirdLabAaSoD\x64\Debug\ThirdLabAaSoD.exe
+﻿  Mnogochlen.cpp
+C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(30,31): error C2440: инициализация: невозможно преобразовать "const Mnogochlen<int>" в "Mnogochlen<double>"
+C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(30,31): message : Для выполнения данного преобразования нет доступного оператора преобразования, определенного пользователем, или вызов оператора невозможен
+C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(34,11): warning C4244: инициализация: преобразование "__int64" в "int", возможна потеря данных
+C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(38,5): error C2248: Mnogochlen<double>::begin: невозможно обратиться к private член, объявленному в классе "Mnogochlen<double>"
+C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.hpp(32,10): message : см. объявление "Mnogochlen<double>::begin"
+C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(30,5): message : см. объявление "Mnogochlen<double>"
+C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(38,53): error C2248: Mnogochlen<double>::end: невозможно обратиться к private член, объявленному в классе "Mnogochlen<double>"
+C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.hpp(34,10): message : см. объявление "Mnogochlen<double>::end"
+C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(30,5): message : см. объявление "Mnogochlen<double>"
+C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(48,5): error C2440: return: невозможно преобразовать "Mnogochlen<double>" в "Mnogochlen<int>"
+C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(48,5): message : Для выполнения данного преобразования нет доступного оператора преобразования, определенного пользователем, или вызов оператора невозможен

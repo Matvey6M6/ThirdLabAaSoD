@@ -25,22 +25,47 @@ inline bool operator>=(const complex<T> a, const complex<T> b)
     return ((a.real() >= b.real()) && (a.imag() >= b.imag()));
 }
 
+Mnogochlen<int> Mnogochlen<int>::Normalize() const
+{
+    Mnogochlen Newbie = *this;
+
+    double Delitel = double((*this)[GetOrderOfMnogochlen()]);
+
+    int i = GetOrderOfMnogochlen();
+
+    cout << Newbie << endl;
+
+    for (auto it = Newbie.begin(); it != Newbie.end(); it++)
+    {
+        //Newbie.Set(i, ((*this)[i] / Delitel));
+        //cout << (double((*this)[i]) / Delitel) << endl;
+        if (i == it->MyOrder) it->Value = (double((*this)[i]) / Delitel);
+        i--;
+    }
+
+    //cout << Newbie << endl;
+
+    return Newbie;
+}
+
 template <typename T>
 Mnogochlen<T> Mnogochlen<T>::Normalize() const
 {
-    Mnogochlen *Newbie = new Mnogochlen(GetOrderOfMnogochlen());
+    Mnogochlen Newbie = *this;
 
     T Delitel = T((*this)[GetOrderOfMnogochlen()]);
 
-    int i = 0;
+    int i = GetOrderOfMnogochlen();
 
-    for (auto it = Newbie->crbegin(); it != Newbie->crend(); it++)
+    for (auto it = Newbie.cbegin(); it != Newbie.cend(); it++)
     {
-        Newbie->Set(i, ((*this)[i] / Delitel));
-        i++;
+        Newbie.Set(i, ((*this)[i] / Delitel));
+        i--;
     }
 
-    return *Newbie;
+    cout << Newbie<<endl;
+
+    return Newbie;
 }
 
 /*template <typename T>
@@ -60,7 +85,7 @@ Mnogochlen<T>::Mnogochlen(long long Order)
 {
     if (Order >= 0 || Epsilon > T(0))
     {
-        OrderOfMnogochlen = Order;
+        this->OrderOfMnogochlen = Order;
         this->Epsilon = Epsilon;
     }
     else
@@ -74,14 +99,13 @@ Mnogochlen<T>::Mnogochlen(long long Order)
 Mnogochlen<T>::Mnogochlen(const Mnogochlen &Other)
 {
     OrderOfMnogochlen = Other.GetOrderOfMnogochlen();
-    Head = nullptr;
 
-    Node<T> *P = Other.GetHead();
+    auto P = Other.cbegin();
 
-    while (P != nullptr)
+    while (P != Other.cend())
     {
         Set(P->MyOrder, P->Value);
-        P = P->Next;
+        P++;
     }
 }*/
 
@@ -285,6 +309,7 @@ void Mnogochlen<int>::GetRoots() const
     }
     //Node* Pointer = GetHead();
     Mnogochlen Normalized = Normalize();
+    cout << Normalized << endl;
     // cout << Normalized << endl;
     double a = Normalized[2];
     double b = Normalized[1];

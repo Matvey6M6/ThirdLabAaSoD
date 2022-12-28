@@ -51,7 +51,9 @@ public:
 
     Mnogochlen(long long Order);
 
-    Mnogochlen(const Mnogochlen& Other) = default;
+    //~Mnogochlen();
+
+    Mnogochlen(const Mnogochlen&) = default;
 
     ~Mnogochlen() = default;
 
