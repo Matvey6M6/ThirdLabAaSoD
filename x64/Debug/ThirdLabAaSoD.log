@@ -1,12 +1,37 @@
 ﻿  Mnogochlen.cpp
-C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(30,31): error C2440: инициализация: невозможно преобразовать "const Mnogochlen<int>" в "Mnogochlen<double>"
-C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(30,31): message : Для выполнения данного преобразования нет доступного оператора преобразования, определенного пользователем, или вызов оператора невозможен
 C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(34,11): warning C4244: инициализация: преобразование "__int64" в "int", возможна потеря данных
-C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(38,5): error C2248: Mnogochlen<double>::begin: невозможно обратиться к private член, объявленному в классе "Mnogochlen<double>"
-C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.hpp(32,10): message : см. объявление "Mnogochlen<double>::begin"
-C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(30,5): message : см. объявление "Mnogochlen<double>"
-C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(38,53): error C2248: Mnogochlen<double>::end: невозможно обратиться к private член, объявленному в классе "Mnogochlen<double>"
-C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.hpp(34,10): message : см. объявление "Mnogochlen<double>::end"
-C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(30,5): message : см. объявление "Mnogochlen<double>"
-C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(48,5): error C2440: return: невозможно преобразовать "Mnogochlen<double>" в "Mnogochlen<int>"
-C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(48,5): message : Для выполнения данного преобразования нет доступного оператора преобразования, определенного пользователем, или вызов оператора невозможен
+C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(42,63): warning C4244: =: преобразование "double" в "T", возможна потеря данных
+          with
+          [
+              T=int
+          ]
+C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(431,31): warning C4244: +=: преобразование "double" в "T", возможна потеря данных
+          with
+          [
+              T=int
+          ]
+C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(426,1): message : во время компиляции функции-члена класс шаблон "T Mnogochlen<T>::CountValue(T) const"
+          with
+          [
+              T=int
+          ]
+C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(28,43): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "Mnogochlen<int>"
+C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(58,11): warning C4244: инициализация: преобразование "__int64" в "int", возможна потеря данных
+C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(53,1): message : во время компиляции функции-члена класс шаблон "Mnogochlen<float> Mnogochlen<float>::Normalize(void) const"
+C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(444,33): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "Mnogochlen<float>"
+C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(390,1): warning C4305: аргумент: усечение из "double" в "const std::complex<float>::_Ty"
+C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(364,1): message : во время компиляции функции-члена класс шаблон "void Mnogochlen<std::complex<float>>::GetRoots(void) const"
+C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(391,1): warning C4305: аргумент: усечение из "double" в "const std::complex<float>::_Ty"
+C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(431,49): warning C4244: аргумент: преобразование "const __int64" в "const std::complex<float>::_Ty", возможна потеря данных
+C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(426,1): message : во время компиляции функции-члена класс шаблон "T Mnogochlen<T>::CountValue(T) const"
+          with
+          [
+              T=std::complex<float>
+          ]
+C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(431,49): warning C4244: аргумент: преобразование "const __int64" в "const std::complex<double>::_Ty", возможна потеря данных
+C:\Users\RELOAD\Documents\ThirdLabAaSoD\ThirdLabAaSoD\Mnogochlen.cpp(426,1): message : во время компиляции функции-члена класс шаблон "T Mnogochlen<T>::CountValue(T) const"
+          with
+          [
+              T=std::complex<double>
+          ]
+  ThirdLabAaSoD.vcxproj -> C:\Users\RELOAD\Documents\ThirdLabAaSoD\x64\Debug\ThirdLabAaSoD.exe

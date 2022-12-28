@@ -63,7 +63,7 @@ Mnogochlen<T> Mnogochlen<T>::Normalize() const
         i--;
     }
 
-    cout << Newbie<<endl;
+    //cout << Newbie<<endl;
 
     return Newbie;
 }
